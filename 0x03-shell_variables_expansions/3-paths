@@ -1,2 +1,2 @@
-#!/bin/bashecho
+#!/bin/bash
 echo $(( $(echo $PATH | tr ":" "\n" | grep -c "/") + 1 ))
