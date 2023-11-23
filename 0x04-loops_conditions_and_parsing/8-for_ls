@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# a Bash script that displays content of the current director
 
 for i in *
 do

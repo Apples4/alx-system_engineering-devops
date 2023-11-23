@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+# Bash script that displays Best School 10 times and hi at 9th time
 
 i=0
-
 while [ "$i" -lt 10 ]
 do
 	if [ "$i" -eq 9 ]
