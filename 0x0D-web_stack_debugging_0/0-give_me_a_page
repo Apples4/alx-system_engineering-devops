@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script to debug a fault
+
+sudo service apache2 start
