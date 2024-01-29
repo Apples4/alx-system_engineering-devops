@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# configuring server with load balance
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+#make the folder and index file
+mkdir -p /var/www/html
+touch /var/www/html/index.html
+touch /var/www/html/404.html
+
+echo "Hello World" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+# redirect a page
+string_redirect="server_name _;
+	add_header X-Served-By \$hostname;
+	rewrite ^\/redirect_me http:\/https://www.youtube.com permanent;"
+sudo sed -i "s/server_name _;/$string_redirect/" /ect/nginx/sites-enabled/default
+
+# redirect configure 404
+string_404_redirect="listen 80 default_server;
+	error_page 404 \/400.html;
+	location = \/400.html {
+		root \/var/www\/html;
+		internal;
+	}"
+sudo sed -i "s/listen 80 default_server;/$string_404_redirect" /ect/nginx /sites-endabled/default
+
+sudo service nginx restart
