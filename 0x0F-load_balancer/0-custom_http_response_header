@@ -25,6 +25,6 @@ string_404_redirect="listen 80 default_server;
 		root \/var/www\/html;
 		internal;
 	}"
-sudo sed -i "s/listen 80 default_server;/$string_404_redirect" /ect/nginx /sites-endabled/default
+sudo sed -i "s/listen 80 default_server;/$string_404_redirect" /ect/nginx/sites-endabled/default
 
 sudo service nginx restart
