@@ -1,0 +1,1 @@
+This directory is an introduction to firewalls which are used to isolate potential threats to a network. The firewall can be hardware or software of both due to the demand and using ufw(uncomplicated firewall)
