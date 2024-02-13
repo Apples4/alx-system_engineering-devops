@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# script that uses nginx user privilages
+
+# change the users
+sed -i "s/#user www-data/user nginx" /etc/nginx/nginx.conf
+sed -i "s/80/8000" /etc/nginx/nginx.conf
+
+# changing permissions for the user
+chmod 644 /etc/nginx/nginx.conf
+
+pkill apache2
+
+# restart config with new changes
+sudo -u nginx service start
