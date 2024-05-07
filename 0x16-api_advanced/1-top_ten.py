@@ -15,8 +15,8 @@ def top_ten(subreddit):
     limit = 9
     listing = "hot"
     url = "https://www.reddit.com/r/{}/{}.json?limit={}".format(subreddit,
-                                                                     listing,
-                                                                     limit)
+                                                                listing,
+                                                                limit)
     header = {"User-agent": "Google Chrome Version 81.0.4044.129"}
     r = requests.get(url, headers=header)
     if r.status_code != 200:
