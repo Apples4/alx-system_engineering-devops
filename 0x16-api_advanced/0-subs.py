@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" script that access API """
-""" importing libraries"""
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """ 
+    """
     function that prints number of subscribers
     param: subreddit url address
     returns - number of subscriber to the subreddit or 0

@@ -4,7 +4,6 @@
 import requests
 
 
-
 def recurse(subreddit, hot_list=[]):
     """
     param subreddit: subreddit we are interested in
@@ -33,4 +32,3 @@ def recurse(subreddit, hot_list=[]):
         return hot_list
     else:
         return None
-

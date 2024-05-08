@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-""" function to queries the Reddit API and prints the titles """
-
 import requests
 
 
@@ -26,4 +24,3 @@ def top_ten(subreddit):
         response = r.json().get("data")
         for top in response.get("children"):
             print(top.get("data").get("title"))
-
