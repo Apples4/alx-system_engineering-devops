@@ -11,7 +11,7 @@ def recurse(subreddit, hot_list=[]):
     return: None or list of hot titles
     """
     if subreddit is None or not isinstance(subreddit, str):
-        print(None)
+        print("None")
     global after
     limit = 100
     listing = "hot"
@@ -31,4 +31,4 @@ def recurse(subreddit, hot_list=[]):
             hot_list.append(i.get("data").get("title"))
         return hot_list
     else:
-        return None
+        print("None")

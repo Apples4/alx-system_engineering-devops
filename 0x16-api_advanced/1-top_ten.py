@@ -8,7 +8,7 @@ def top_ten(subreddit):
     return: first hot titles or None
     """
     if subreddit is None or not isinstance(subreddit, str):
-        return None
+        print("None")
 
     limit = 9
     listing = "hot"
